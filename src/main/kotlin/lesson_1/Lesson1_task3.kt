@@ -11,8 +11,10 @@ fun main (){
     println(minute)
 
     hour = "10"
-    minute= "55"
+    minute = "55"
 
-    print(hour + ":" + minute)
+    val time = "$hour:$minute"
+
+    print(time)
 
 }
