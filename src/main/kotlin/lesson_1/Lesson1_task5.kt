@@ -3,29 +3,15 @@ package org.example.lesson_1
 fun main () {
 
     val secondsAll = 6480
-    val seconds = secondsAll % 60
-    val minuteAll = secondsAll / 60
-    val minute = minuteAll % 60
-    val hours = minuteAll  / 60
+    val seconds = secondsAll % secondsInMinute
+    val minuteAll = secondsAll / secondsInMinute
+    val minute = minuteAll % minuteInHours
+    val hours = minuteAll / minuteInHours
+    val timeInCosmos = String.format("%02d:%02d:%02d", hours, minute, seconds)
 
-    if (hours < 10) {
-        print("0"+ hours)
-    } else {
-        print(hours)
-    }
-    print(":")
-
-    if (minute < 10) {
-        print("0" + minute)
-    } else {
-        print(minute)
-    }
-    print(":")
-
-    if (seconds < 10) {
-         print("0" + seconds)
-    } else {
-         print(seconds)
-    }
+    print(timeInCosmos)
 
 }
+
+const val secondsInMinute = 60
+const val minuteInHours = 60
