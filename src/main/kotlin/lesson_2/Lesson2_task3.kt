@@ -10,7 +10,7 @@ fun main () {
     val travelTimeMinutes = (travelTimeInMinutes % minuteInHours).toLong()
     val arrivalTime = departureTime.plusHours(travelTimeHours).plusMinutes(travelTimeMinutes)
 
-    println("Время прибытия поезда: $arrivalTime")
+    print("Время прибытия поезда: $arrivalTime")
 
 }
 
