@@ -4,8 +4,9 @@ fun main () {
 
     val ironOre = 11
     val cristallineOre = 7
-    val bonusIronOre = (ironOre*0.2).toInt()
-    val bonusCristallineOre = (cristallineOre*0.2).toInt()
+    val buffPercent = 20
+    val bonusIronOre = (ironOre*buffPercent/100)
+    val bonusCristallineOre = (cristallineOre*buffPercent/100)
 
     println("Колличество бонусной железной руды: $bonusIronOre")
     println("Колличество бонусной кристалической руды: $bonusCristallineOre")
