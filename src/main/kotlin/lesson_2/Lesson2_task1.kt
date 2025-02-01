@@ -10,6 +10,6 @@ fun main () {
     val sumScore = (studentScore1 + studentScore2 + studentScore3 + studentScore4).toFloat()
     val averageScore = (sumScore / numbersOfStudents)
 
-    print("Средни й бал: $averageScore")
+    print("Средний бал: $averageScore")
 
 }
