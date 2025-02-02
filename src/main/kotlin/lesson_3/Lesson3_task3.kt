@@ -15,7 +15,6 @@ fun main () {
         $factor x 8 = ${factor * 8}
         $factor x 9 = ${factor * 9}
     """.trimIndent()
-
     )
 
 }
