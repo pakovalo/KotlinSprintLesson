@@ -3,12 +3,13 @@ package org.example.lesson_3
 fun main() {
 
     val moveInChess = "D2-D4;0"
-    val from = moveInChess.substring(0,2)
-    val to = moveInChess.substring(3,5)
-    val move = moveInChess.substring(6)
+    val parsString = moveInChess.split("-", ";")
+    val from = parsString.get(0)
+    val to = parsString.get(1)
+    val move = parsString.get(2)
 
-    println("Откуда:$from")
-    println("Куда:$to")
-    print("Номер хода:$move")
+    println("Откуда: $from")
+    println("Куда: $to")
+    print("Откуда: $move")
 
 }
