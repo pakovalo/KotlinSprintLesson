@@ -8,7 +8,7 @@ fun main () {
     val randomNumber2 = Random.nextInt(10)
     val result = randomNumber1 + randomNumber2
 
-    println("Ведите результат сложения числа $randomNumber1 и $randomNumber2 и нажмите Enter")
+    println("Ведите результат сложения чисел $randomNumber1 и $randomNumber2 и нажмите Enter")
 
     val yourResult = readln().toInt()
 
