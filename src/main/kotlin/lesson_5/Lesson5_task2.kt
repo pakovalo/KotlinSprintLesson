@@ -8,6 +8,7 @@ fun main() {
     val currentYear = currentDate.year
 
     println("Введите свой возраст в четырехзначном формате")
+
     val yearOfBirth = readln().toInt()
     val age = currentYear - yearOfBirth
 
