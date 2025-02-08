@@ -2,11 +2,11 @@ package org.example.lesson_5
 
 fun main (){
 
-    val randomNumber1 = (1..42).random()
-    val randomNumber2 = (1..42).random()
-    val randomNumber3 = (1..42).random()
+    val rangeNumbers = (1..42).toList()
+    val randomNumber1 = rangeNumbers.random()
+    val randomNumber2 = rangeNumbers.random()
+    val randomNumber3 = rangeNumbers.random()
     val randomNumber = listOf(randomNumber1, randomNumber2, randomNumber3)
-
 
     println("Введите первое число от 0 до 42")
     val yourNumbeer1 = readln().toInt()
@@ -19,7 +19,7 @@ fun main (){
 
     val yourNumbers = listOf(yourNumbeer1, yourNumbeer2, yourNumbeer3)
     val result = yourNumbers.intersect(randomNumber)
-    val guessedNumbers =result.size
+    val guessedNumbers = result.size
 
     when (guessedNumbers) {
         3 -> println("Вы угадали все числа и выиграли джекпот!\n")
