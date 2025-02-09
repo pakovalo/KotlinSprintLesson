@@ -16,17 +16,17 @@ fun main() {
     println("Введите Ваш рост в сантиметрах:")
     val heightInmeter = (readln().toFloat() / centimetersInMeter)
 
-    val bodyMassIndex = (bodyWeight / heightInmeter.pow(2))
+    val bodyMassIndex = (bodyWeight / heightInmeter.pow(DEGREE_BY_FORMULA))
     val roundedBodyMassIndex = String.format("%.2f", bodyMassIndex)
 
-   if (bodyMassIndex < smallMass)
-       weightCategory = "Недостаточная масса тела"
-    else if (bodyMassIndex >= smallMass && bodyMassIndex < normalMass)
-        weightCategory = "Нормальная масса тела"
-    else if (bodyMassIndex >= normalMass && bodyMassIndex < bigMass)
-        weightCategory = "Избыточная масса тела"
-    else
-        weightCategory = "Ожирение"
+    when {
+        (bodyMassIndex < smallMass) -> weightCategory = "Недостаточная масса тела"
+        (bodyMassIndex >= smallMass && bodyMassIndex < normalMass) -> weightCategory= "Нормальная масса тела"
+        (bodyMassIndex >= normalMass && bodyMassIndex < bigMass) -> weightCategory = "Избыточная масса тела"
+        else -> weightCategory = "Ожирение"
+    }
 
     println("Ваш ИМТ равен $roundedBodyMassIndex  - $weightCategory")
 }
+
+const val DEGREE_BY_FORMULA = 2
