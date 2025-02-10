@@ -2,16 +2,13 @@ package org.example.lesson_6
 
 fun main() {
 
-    var counter = 0
-
     println("Введите колличество секунд в таймере")
-    val timer = readln().toInt()
+    val timer = readln().toLong()
+    val sleepTime = timer * MILLISECONDS_IN_SECOND
 
-
-    while (counter < timer) {
-       counter++
-       Thread.sleep(1000)
-    }
+    Thread.sleep(sleepTime)
 
     println("Прошло $timer секунд.")
 }
+
+const val MILLISECONDS_IN_SECOND = 1000
