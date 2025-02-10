@@ -7,7 +7,7 @@ fun main() {
     var password = ""
 
     for (i in 1..passwordLenght step (CHARACTERS_PER_CYCLE)) {
-        password = password + lettersForPassword.random()+numberForPassword.random()
+        password = password + lettersForPassword.random() + numberForPassword.random()
     }
     println(password)
 }
