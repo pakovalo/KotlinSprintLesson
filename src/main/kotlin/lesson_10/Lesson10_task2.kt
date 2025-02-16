@@ -2,18 +2,17 @@ package org.example.lesson_10
 
 fun main() {
 
-    println("Придумайте логин")
+    println("Придумайте логин не менее 4 символов")
     val login = readln()
 
-    println("Придумайте пароль")
+    println("Придумайте пароль не менее 4 символов")
     val password = readln()
-
-    checkLength(login, password)
-}
-
-fun checkLength(login: String, password: String) {
-
-    if (login.length < 4 || password.length < 4)
-        println("Логин или пароль недостаточной длинны")
+    if (validateCredentials(login) && validateCredentials(password)) {
+        println("Регистрация прошла успешно! Добро пожаловать, $login!")
+    } else {
+        println("Логин или пароль недостаточно длинные.")
+    }
 
 }
+
+fun validateCredentials(credential: String): Boolean { return credential.length >= 4 }
