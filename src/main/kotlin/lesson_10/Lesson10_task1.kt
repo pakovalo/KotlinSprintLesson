@@ -2,8 +2,8 @@ package org.example.lesson_10
 
 fun main() {
 
-    val numberTheDiceComp = throwTheDiceComp()
-    val numberTheDiceMan = throwTheDiceMan()
+    val numberTheDiceComp = throwDice()
+    val numberTheDiceMan = throwDice()
 
     println("Бросок кубика машиной: $numberTheDiceComp")
     println("Бросок кубика человеком: $numberTheDiceMan")
@@ -16,6 +16,4 @@ fun main() {
 
 }
 
-fun throwTheDiceComp () : Int { return (1..6).random() }
-
-fun throwTheDiceMan () : Int { return (1..6).random() }
+fun throwDice () : Int { return (1..6).random() }
