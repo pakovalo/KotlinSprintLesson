@@ -18,10 +18,13 @@ fun main() {
         counter++
     } while (MAX_INGREDIENT >= counter)
 
-    val ingredients = ingredientsMutableSet.toMutableList()
+    var ingredients = ingredientsMutableSet.toMutableList()
 
     ingredients.sort()
-    ingredients[0] = ingredients[0].replaceFirstChar { char -> char.uppercase() }
-    println(ingredients)
+
+    val formatedIngredients = ingredients.joinToString(", ").replaceFirstChar { char -> char.uppercase() }
+
+    println(formatedIngredients)
 }
+
 const val MAX_INGREDIENT = 5
