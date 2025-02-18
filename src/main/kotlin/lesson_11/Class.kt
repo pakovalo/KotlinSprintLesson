@@ -14,7 +14,6 @@ class User2(
     val email: String,
     var bio: String? = null,
 ) {
-
     fun printUser() {
         println("id Пользователя: $id")
         println("Логин пользователя: $login")

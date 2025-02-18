@@ -8,7 +8,6 @@ fun main() {
         password = "password1",
         email = "user1@gmail.com",
     )
-
     println("Информация о пользователе user1")
     user1.printUser()
 
