@@ -41,3 +41,37 @@ class User2(
         } else println("Не верный пароль.")
     }
 }
+
+class Member(
+    val username: String,
+    val avatar: String,
+)
+
+class Room(
+    val cover: String,
+    val roomName: String,
+) {
+    val members: MutableMap <Member, String> = mutableMapOf()
+
+    fun addMembers(member: Member, status: String = "микрофон выключен") {
+        members[member] = status
+        println("Участник ${member.username} добавлен в комнату.")
+    }
+
+    fun changeStatus(username: String, newStatus: String) {
+        val member = members.keys.find { it.username == username }
+        if (member != null) {
+            members[member] = newStatus
+            println("Статус участника $username обновлен на: $newStatus")
+        }
+    }
+
+    fun printRoom() {
+        println("Комната: $roomName")
+        println("Обложка: $cover")
+        println("Участники:")
+        members.forEach { (participant, status) ->
+            println("- ${participant.username} (аватар: ${participant.avatar}), статус: $status")
+        }
+    }
+}
