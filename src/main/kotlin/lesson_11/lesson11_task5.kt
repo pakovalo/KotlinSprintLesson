@@ -38,10 +38,6 @@ class Forum {
     }
 }
 
-
-
-
-
 fun main(){
 
     val forum = Forum()
