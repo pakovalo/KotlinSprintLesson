@@ -4,12 +4,12 @@ private class Weather3(daytimeTemperature: Int, nightTemperature: Int, downfall:
 
     val daytimeTemperature = daytimeTemperature - KELVIN_TO_CELSIUS
     val nightTemperature = nightTemperature - KELVIN_TO_CELSIUS
-    val downfall = downfall
+    val isDownfall = downfall
 
     fun printWeather() {
         println("Температура днем: $daytimeTemperature")
         println("Температура ночью: $nightTemperature")
-        println("Наличие осадков: ${if (downfall) "есть" else "нет"}")
+        println("Наличие осадков: ${if (isDownfall) "есть" else "нет"}")
     }
 }
 
