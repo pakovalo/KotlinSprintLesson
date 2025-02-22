@@ -1,14 +1,14 @@
 package org.example.lesson_12
 
 private class NewWeather(
-    var daytimeTemperature: Int,
-    var nightTemperature: Int,
-    var downfall: Boolean,
+    val daytimeTemperature: Int,
+    val nightTemperature: Int,
+    val isDownfall: Boolean,
 ) {
     fun printWeather() {
         println("Температура днем: $daytimeTemperature")
         println("Температура ночью: $nightTemperature")
-        println("Наличие осадков: ${if (downfall) "есть" else "нет"}\n")
+        println("Наличие осадков: ${if (isDownfall) "есть" else "нет"}\n")
     }
 }
 
@@ -16,7 +16,7 @@ fun main() {
     val weather = NewWeather(
     daytimeTemperature = 25,
     nightTemperature = 18,
-    downfall = true,
+    isDownfall = true,
     )
     weather.printWeather()
 }
