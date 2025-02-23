@@ -6,7 +6,7 @@ open class Liner (
     val capacity: Int = 200,
     ) {
 
-    open fun printStarship() {
+    open fun printShip() {
         println()
         println("Тип корабля: $name")
         println("Скорость: $speed узлов")
@@ -27,8 +27,8 @@ class Icebreaker (
     speed = 800,
     capacity = 150
 ) {
-    override fun printStarship() {
-        super.printStarship()
+    override fun printShip() {
+        super.printShip()
         println("Дополнительные возможности: $skill")
     }
 }
@@ -38,7 +38,7 @@ fun main() {
     val cargoShip = CargoShip()
     val icebreaker = Icebreaker()
 
-    liner.printStarship()
-    cargoShip.printStarship()
-    icebreaker.printStarship()
+    liner.printShip()
+    cargoShip.printShip()
+    icebreaker.printShip()
 }
