@@ -11,10 +11,12 @@ class WeatherDay(daytimeTemperatureKelvin: Int, nightTemperatureKelvin: Int, isD
 fun main() {
 
     val weatherList = mutableListOf<WeatherDay>()
+    val daytimeTemperatureRange = 265..305
+    val nightTemperatureRange = 255..295
 
     repeat(DAY_IN_MONTH) {
-        val daytimeTemperatureKelvin = (265..305).random()
-        val nightTemperatureKelvin = (255..295).random()
+        val daytimeTemperatureKelvin = daytimeTemperatureRange.random()
+        val nightTemperatureKelvin = nightTemperatureRange.random()
         val isDownfall = Random.nextBoolean()
         weatherList.add(WeatherDay(daytimeTemperatureKelvin, nightTemperatureKelvin, isDownfall))
         }
