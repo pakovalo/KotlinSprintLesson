@@ -15,6 +15,6 @@ fun main() {
         NewTelephoneContact("Мария Сидорова", 89361234567, "Google"),
         NewTelephoneContact("Михаил Новиков", 89461234567, "null")
     )
-    val companies = phoneBook.mapNotNull { it.company }.filter { it != "null" }.distinct()
+    val companies = phoneBook.mapNotNull { it.company }.toSet()
     companies.forEach { println(it) }
 }
