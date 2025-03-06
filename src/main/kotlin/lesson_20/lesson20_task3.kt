@@ -11,9 +11,8 @@ fun main() {
     val openDoor: (Player) -> Unit = {
         if (player.hasKey)
             println("Игрок ${player.name} открыл дверь.")
-
-    else
-        println("Дверь заверта.")
+        else
+            println("Дверь заверта.")
     }
     openDoor(player)
 }
