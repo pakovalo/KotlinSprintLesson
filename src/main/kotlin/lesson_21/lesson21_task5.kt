@@ -12,6 +12,7 @@ fun main() {
     )
     println(listSkills.maxCategory())
 }
+
 fun Map<String, Int>.maxCategory (): String {
-return maxBy { it.value }.key
+    return maxBy { it.value }.key
 }
