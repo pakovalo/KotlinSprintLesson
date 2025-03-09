@@ -1,11 +1,12 @@
 package org.example.lesson_22
 
-data class MainScreenState(
-    val data: String,
-    val isLoading: Boolean = false,
-)
-
 class MainScreenViewModel {
+
+    data class MainScreenState(
+        val data: String,
+        val isLoading: Boolean = false,
+    )
+
     companion object {
         var mainScreenState = MainScreenState("Данных нет")
 
